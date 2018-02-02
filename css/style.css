@@ -1,0 +1,96 @@
+/**
+ * File Name: style.css
+ * Description: Main style sheet
+ *
+ * @author Analia Mok
+ */
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ color: #333;
+ font-family: 'Lato', sans-serif;
+}
+
+html, body{
+ width: 100%;
+ background-color: #48A9A6;
+}
+
+h1, h2{
+ font-family: 'Raleway', sans-serif;
+}
+h1{
+  font-size: 3rem; /* 48px */
+ font-weight: 700;
+ color: #FFF;
+}
+h2{
+ font-weight: 500;
+ color: #000;
+}
+
+.wrapper{
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.wrapper #image{
+  margin-top: 5rem;
+  text-align: center;
+}
+
+div#content{
+  position: absolute;
+  top: 2.5rem;
+  width: 100%;
+  z-index: 1;
+}
+#content h1{
+  text-align: center;
+}
+#content #filter-bar{
+  margin: 4rem 0;
+}
+
+/* #filter-bar{
+  position: relative;
+} */
+
+#filter-bar .right-items{
+  /* position: absolute;
+  right: 0; */
+  float: right;
+  font-size: 5rem;
+}
+
+#filter-bar select{
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+div.grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  clear: both;
+}
+
+div.card{
+  flex: 0 1 30%;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #CBEEF3;
+}
+
+div.card:nth-child(3n),
+div.card:nth-child(3n+1){
+  margin-right: 0;
+  margin-left: 0;
+}
+
+div.card span::before{
+  content: '\25A0';
+}
