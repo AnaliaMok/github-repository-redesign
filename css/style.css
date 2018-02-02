@@ -52,6 +52,7 @@ div#content{
   text-align: center;
 }
 #content #filter-bar{
+  display: flex;
   margin: 4rem 0;
 }
 
@@ -60,18 +61,18 @@ div#content{
 } */
 
 #filter-bar .right-items{
-  /* position: absolute;
-  right: 0; */
-  float: right;
   font-size: 4rem;
 }
 .right-items i{
   color: #FFF;
+  cursor: pointer;
 }
 
 #filter-bar select{
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
+  outline: none;
+  border: 0;
 }
 
 div.grid{
@@ -82,7 +83,7 @@ div.grid{
 }
 
 div.card{
-  flex: 0 1 32.2%;
+  flex: 0 1 32%;
   margin: 0 1rem 1rem 1rem;
   padding: 1rem;
   background-color: #CBEEF3;
