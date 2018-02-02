@@ -43,7 +43,7 @@ require_once('partials/header.php');
         $counter = 0;
       ?>
 
-      <?php while($counter < 9): ?>
+      <?php while($counter < 8): ?>
         <div class="card">
           <h2><?php echo $temp_title; ?></h2>
           <div class="card-content"><?php echo $temp_excerpt; ?></div>
