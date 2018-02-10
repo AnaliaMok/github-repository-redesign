@@ -11,6 +11,7 @@
  box-sizing: border-box;
  color: #333;
  font-family: 'Lato', sans-serif;
+ text-decoration: none;
 }
 
 html, body{
@@ -40,6 +41,11 @@ h2{
 .wrapper #image{
   margin-top: 5rem;
   text-align: center;
+}
+
+#profile-link{
+  text-align: center;
+  text-decoration: underline;
 }
 
 div#content{
@@ -82,15 +88,16 @@ div.grid{
   clear: both;
 }
 
-div.card{
+.card{
+  display: block;
   flex: 0 1 32%;
   margin: 0 1rem 1rem 1rem;
   padding: 1rem;
-  background-color: #CBEEF3;
+  background-color: rgba(203, 238, 243, 0.8);
 }
 
-div.card:nth-child(3n),
-div.card:nth-child(3n+1){
+.card:nth-child(3n),
+.card:nth-child(3n+1){
   margin-right: 0;
   margin-left: 0;
 }
@@ -99,6 +106,6 @@ div.card:nth-child(3n+1){
   margin: 0.5rem 0 1.5rem 0;
 }
 
-div.card span::before{
-  content: '\25A0';
+.card span::before{
+  content: '\25A0 ';
 }

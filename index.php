@@ -15,6 +15,7 @@ require_once('partials/header.php');
   </div>
   <div id="content">
     <h1>Analia Mok | GitHub Respositories</h1>
+    <div id="profile-link"><a href="https://github.com/AnaliaMok">If you'd rather go see my actual github profile, that's fine too I guess...</a></div>
     <div id="filter-bar">
       <?php
         $languages = array('PHP', 'Java', 'C', 'JavaScript', 'HTML', 'CSS');
@@ -34,25 +35,7 @@ require_once('partials/header.php');
 
     </div><!-- #filter-bar -->
 
-    <div class="grid">
-      <?php
-        $temp_title = 'Repository Name';
-        $temp_excerpt = 'Pastry tiramisu sweet carrot cake sweet roll. Cupcake
-        halvah chocolate bar biscuit jelly beans.';
-        $temp_lang = 'PHP';
-        $counter = 0;
-      ?>
-
-      <?php while($counter < 8): ?>
-        <div class="card">
-          <h2><?php echo $temp_title; ?></h2>
-          <div class="card-content"><?php echo $temp_excerpt; ?></div>
-          <div><span class="language"><?php echo $temp_lang ?></span></div>
-        </div>
-        <?php $counter++; ?>
-      <?php endwhile; ?>
-
-    </div>
+    <div class="grid"></div>
 
   </div><!-- #content -->
 </main>

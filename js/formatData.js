@@ -8,8 +8,8 @@ $(document).ready(function(){
       var curr = repos[i];
 
       var card = '<div class="card">'; // TODO: Adjust styling to make cards a tags; place url here
-      card += '<h2>' + curr.title + '</h2>';
-      card += '<div class="card-content">' + curr.description + '</div>';
+      card += '<h2><a href="' + curr.url + '">' + curr.title + '</a></h2>';
+      card += '<div class="card-content"><a href="' + curr.url + '">' + curr.description + '</a></div>';
       if(curr.language != null){
         card += '<div><span class="language">' + curr.language + '</span></div>';
       }
