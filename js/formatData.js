@@ -9,7 +9,10 @@ $(document).ready(function(){
 
       var card = '<div class="card">'; // TODO: Adjust styling to make cards a tags; place url here
       card += '<h2><a href="' + curr.url + '">' + curr.title + '</a></h2>';
-      card += '<div class="card-content"><a href="' + curr.url + '">' + curr.description + '</a></div>';
+
+      var description = (curr.description === null) ? '':curr.description;
+      card += '<div class="card-content"><a href="' + curr.url + '">' + description + '</a></div>';
+
       if(curr.language != null){
         card += '<div><span class="language">' + curr.language + '</span></div>';
       }

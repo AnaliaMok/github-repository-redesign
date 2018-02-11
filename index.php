@@ -15,7 +15,6 @@ require_once('partials/header.php');
   </div>
   <div id="content">
     <h1>Analia Mok | GitHub Respositories</h1>
-    <div id="profile-link"><a href="https://github.com/AnaliaMok">If you'd rather go see my actual github profile, that's fine too I guess...</a></div>
     <div id="filter-bar">
       <?php
         $languages = array('PHP', 'Java', 'C', 'JavaScript', 'HTML', 'CSS');
@@ -36,10 +35,5 @@ require_once('partials/header.php');
     </div><!-- #filter-bar -->
 
     <div class="grid"></div>
-
-  </div><!-- #content -->
-</main>
-
-
 
 <?php require_once('partials/footer.php'); ?>
