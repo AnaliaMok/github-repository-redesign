@@ -5,19 +5,20 @@ $(document).ready(function(){
     var cards = '';
 
     for(var i = 0, length = repos.length; i < length; i++){
-      var curr = repos[i];
+      var curr = repos[i],
+          description = (curr.description === null) ? '' : curr.description,
+          language = (curr.language !== null) ? curr.language : null;
 
-      var card = '<div class="card">'; // TODO: Adjust styling to make cards a tags; place url here
-      card += '<h2><a href="' + curr.url + '">' + curr.title + '</a></h2>';
+      var card = '<a href="' + curr.url + '" class="card" data-lang="' + language + '">'; // TODO: Adjust styling to make cards a tags; place url here
+      card += '<p class="card-title">' + curr.title + '</p>';
 
-      var description = (curr.description === null) ? '':curr.description;
-      card += '<div class="card-content"><a href="' + curr.url + '">' + description + '</a></div>';
+      card += '<p class="card-content">' + description + '</p>';
 
-      if(curr.language != null){
-        card += '<div><span class="language">' + curr.language + '</span></div>';
+      if(language != null){
+        card += '<p><span class="language">' + language + '</span></p>';
       }
 
-      card += '</div>';
+      card += '</a>'; // End tag
 
       cards += card;
     }

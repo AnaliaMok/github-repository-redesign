@@ -17,6 +17,7 @@
 html, body{
  width: 100%;
  background-color: #48A9A6;
+ text-align: center;
 }
 
 h1, h2{
@@ -34,6 +35,7 @@ h2{
 }
 
 .wrapper{
+  display: inline-block;
   position: relative;
   width: 80%;
   margin: 0 auto;
@@ -50,8 +52,11 @@ h2{
 }
 
 div#content{
+  display: block;
   position: absolute;
   top: 2.5rem;
+  right: 0;
+  left: 0;
   width: 100%;
   z-index: 1;
 }
@@ -59,13 +64,13 @@ div#content{
   text-align: center;
 }
 #content #filter-bar{
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
   display: flex;
   margin: 4rem 0;
 }
-
-/* #filter-bar{
-  position: relative;
-} */
 
 #filter-bar .right-items{
   font-size: 4rem;
@@ -83,25 +88,49 @@ div#content{
 }
 
 div.grid{
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
   display: flex;
+  
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
   justify-content: flex-start;
   clear: both;
 }
 
+/*
+  Card Styling
+  ---------------------------------------------------------------------------
+*/
+
 .card{
   display: block;
+  width: auto;
+  height: auto;
+  -webkit-flex: 1 1 100%;
+  -moz-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
   flex: 1 1 100%;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
   padding: 1rem;
-  background-color: rgb(203, 238, 243);
   background-color: rgba(203, 238, 243, 0.8);
   overflow: hidden;
+  text-align: left;
 }
 
-.card h2{
+.card .card-title{
   display: inline-block;
   word-break: break-all;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  color: #000;
 }
 
 .card .card-content{
@@ -112,6 +141,11 @@ div.grid{
 .card span::before{
   content: "\25A0 ";
 }
+
+/*
+  Footer Styling
+  ---------------------------------------------------------------------------
+*/
 
 footer{
   padding: 2rem 1rem;
@@ -133,6 +167,8 @@ footer{
   margin-top: 0.5rem;
   background-color: #FFF;
   border-radius: 10px;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 #social-links ul li a{
@@ -149,14 +185,17 @@ footer{
   }
 
   .grid .card{
-    flex: 0 1 47.5%;
+    -webkit-flex: 1 1 40%;
+    -moz-flex: 1 1 40%;
+    -ms-flex: 1 1 40%;
+    flex: 1 1 40%;
   }
-  .grid .card:nth-child(odd){
-    margin-right: 1rem;
+  .grid .card:nth-child(even){
+    margin-left: 1rem;
+    margin-right: 0;
   }
 
 }
-
 
 /* Desktop Styling */
 @media screen and (min-width: 1024px){
@@ -166,16 +205,22 @@ footer{
   }
 
   div.grid{
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
     justify-content: space-between;
   }
 
   .grid .card{
-    flex: 1 1 27.5%;
+    -webkit-flex: 1 1 25%;
+    -moz-flex: 1 1 25%;
+    -ms-flex: 1 1 25%;
+    flex: 1 1 25%;
     margin-right: 0;
     margin-bottom: 1rem;
   }
-  .grid .card:nth-child(odd){
-    margin-right: 0;
+  
+  .grid .card:nth-child(even){
+    margin-left: 0;
   }
 
   .grid .card:nth-child(3n-1){
