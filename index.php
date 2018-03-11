@@ -19,18 +19,14 @@ require_once('partials/header.php');
       <?php
         $languages = array('PHP', 'Java', 'C', 'JavaScript', 'HTML', 'CSS');
       ?>
-      <select id="language-select">
-        <!-- TODO: Change to custom dropdown -->
-        <!-- TODO: Still need to add chevron -->
-        <?php foreach($languages as $language): ?>
-          <option value="<?php echo $language; ?>"><?php echo $language; ?></option>
-        <?php endforeach; ?>
-      </select>
 
-      <span class="right-items">
-        <i class="ion ion-grid"></i>
-        <i class="ion ion-navicon"></i>
-      </span>
+      <div id="custom-select">
+        <select id="language-select">
+          <?php foreach($languages as $language): ?>
+            <option value="<?php echo $language; ?>"><?php echo $language; ?></option>
+          <?php endforeach; ?>
+        </select>
+      </div>
 
     </div><!-- #filter-bar -->
 

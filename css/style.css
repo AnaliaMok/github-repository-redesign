@@ -54,7 +54,7 @@ h2{
 div#content{
   display: block;
   position: absolute;
-  top: 2.5rem;
+  top: 5rem;
   right: 0;
   left: 0;
   width: 100%;
@@ -63,6 +63,12 @@ div#content{
 #content h1{
   text-align: center;
 }
+
+/*
+  Filter Bar Styling
+  ---------------------------------------------------------------------------
+*/
+
 #content #filter-bar{
   display: -webkit-box; 
   display: -moz-box;
@@ -80,12 +86,60 @@ div#content{
   cursor: pointer;
 }
 
-#filter-bar select{
-  font-size: 1.5rem;
+/* Custom Select */
+.render::before{
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+#custom-select{
+  position: relative;
+  background-color: #FFF;
+}
+
+#custom-select select{
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none; */
+
+  display: inline-block;
+  padding: 1rem;
+
+  font-size: 1.2rem;
   font-family: 'Raleway', sans-serif;
   outline: none;
   border: 0;
 }
+
+/* div#custom-select select::-ms-expand{
+  display: none;
+} */
+
+/* div#custom-select::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f107";
+} */
+
+#custom-select option{
+  padding: 1rem;
+  background-color: #FFF;
+  border: 0;
+  outline: none;
+}
+
+#custom-select option:hover{
+  background-color: #357B79;
+}
+
+/*
+  Grid Styling
+  ---------------------------------------------------------------------------
+*/
 
 div.grid{
   display: -webkit-box; 
