@@ -101,29 +101,14 @@ div#content{
 }
 
 #custom-select select{
-  /* -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none; */
-
   display: inline-block;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 
   font-size: 1.2rem;
   font-family: 'Raleway', sans-serif;
   outline: none;
   border: 0;
 }
-
-/* div#custom-select select::-ms-expand{
-  display: none;
-} */
-
-/* div#custom-select::after{
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f107";
-} */
 
 #custom-select option{
   padding: 1rem;
@@ -243,11 +228,11 @@ footer{
     -moz-flex: 1 1 40%;
     -ms-flex: 1 1 40%;
     flex: 1 1 40%;
+    margin: 0 0.5rem 1rem 0.5rem;
   }
-  .grid .card:nth-child(even){
-    margin-left: 1rem;
-    margin-right: 0;
-  }
+  /* .grid .card:nth-child(odd){
+    margin-right: 1rem;
+  } */
 
 }
 
@@ -269,16 +254,14 @@ footer{
     -moz-flex: 1 1 25%;
     -ms-flex: 1 1 25%;
     flex: 1 1 25%;
-    margin-right: 0;
-    margin-bottom: 1rem;
+    margin: 0 0.5rem 1rem;
   }
   
-  .grid .card:nth-child(even){
+  /* .grid .card:nth-child(even){
     margin-left: 0;
-  }
+  } */
 
-  .grid .card:nth-child(3n-1){
-    margin-right: 1rem;
-    margin-left: 1rem;
-  }
+  /* .grid .card:nth-child(3n){
+    margin-right: 0;
+  } */
 }
